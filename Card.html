@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500;700;900&display=swap"rel="stylesheet">
+    <style>
+        *{
+            font-family: "Outfit", sans-serif;
+            
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .card a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background-color: #4CAF50;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .card a:hover {
+            background-color: #45a049;
+        }
+
+        </style>
+</head>
+<body>
+    <header>News Feeder</header>
+    <div class="container">
+        <div class="card">
+            <img src="banner-image-1.jpg" alt="Russia and Ukraine">
+            <h3>Russia and Ukraine Trade Blows</h3>
+            <p>Overnight aerial strikes intensify with both sides reporting more than 100 enemy drones.</p>
+            
+        </div>
+
+        <div class="card">
+            <img src="banner-image-2.jpg" alt="Rajinikanth's Coolie">
+            <h3>Rajinikanth’s OTT Success</h3>
+            <p>Breaking records with 'Coolie', the superstar extends his cinematic charm beyond theaters.</p>
+            
+        </div>
+
+        <div class="card">
+            <img src="banner-image-3.jpg" alt="Sunita Williams Returns">
+            <h3>Sunita Williams: Nine Months in Space</h3>
+            <p>Returning astronauts might experience 'baby feet' after prolonged weightlessness.</p>
+            
+        </div>
+
+        <div class="card">
+            <img src="banner-image-4.jpg" alt="Virat Kohli's Arrival">
+            <h3>Kohli Arrives for IPL 2025</h3>
+            <p>Star Indian batter Virat Kohli gears up in Bengaluru for the much-awaited tournament.</p>
+            
+        </div>
+    </div>
+</body>
+</html>

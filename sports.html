@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Breaking News</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .breaking-news-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Styles */
+        .breaking-news-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        
+        .breaking-news-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 0;
+        }
+        
+        .breaking-news-live {
+            background-color: #e74c3c;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        
+        /* News Ticker Styles */
+        .news-ticker {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .ticker-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: ticker 30s linear infinite;
+        }
+        
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        /* News Grid Styles */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .news-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .news-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .news-content {
+            padding: 15px;
+        }
+        
+        .news-category {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+        
+        .news-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 0 10px 0;
+        }
+        
+        .news-excerpt {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .urgent {
+            border-left: 4px solid #e74c3c;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .breaking-news-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .breaking-news-live {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="breaking-news-container">
+        <div class="breaking-news-header">
+            <h1 class="breaking-news-title">Sports Breaking News</h1>
+            <div class="breaking-news-live">LIVE UPDATES</div>
+        </div>
+        
+        <div class="news-ticker">
+            <div class="ticker-content">
+                ⚡ BREAKING: Team wins championship after dramatic final | Star player injured in practice | Transfer window: Major signing confirmed | Coach resigns after disappointing season | Upcoming tournament schedule announced
+            </div>
+        </div>
+        
+        <div class="news-grid">
+            <!-- News Card 1 -->
+            <div class="news-card urgent">
+                <img src="AA1C23B1.jpg" alt="VIRAT in BBL" class="news-image">
+                <div class="news-content">
+                    <span class="news-category">Cricket</span>
+                    <h3 class="news-title">Virat Kohli to join Steve Smith at Sydney Sixers? BBL team's viral post has a catch</h3>
+                    <p class="news-excerpt">Three-time Big Bash League (BBL) Sydney Sixers on Tuesday posted a photo of Virat Kohli on social media, welcoming India and Royal Challengers Bangalore star Virat Kohli. However, after the tweet went viral, the BBL team clarified that it was an April Fools prank made on April 1.</p>
+                    <div class="news-meta">
+                        <span>2 minutes ago</span>
+                        <span>URGENT</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- News Card 2 -->
+            <div class="news-card">
+                <img src="AA1BZ1mE.jpg" alt="" class="news-image">
+                <div class="news-content">
+                    <span class="news-category">IPL</span>
+                    <h3 class="news-title">'Riyan Parag Should Be Banned From IPL': Fans Attack Young RR Star After Viral Video</h3>
+                    <p class="news-excerpt">Social media users attacked Rajasthan Royals’ (RR) stand-in skipper Riyan Parag for his attitude towards fans as some found his actions unbecoming of an Indian cricketer.
+
+                        Parag, leading in his hometown, oversaw RR end their Guwahati leg with their first win in the 2025 Indian Premier League (IPL), beating Chennai Super Kings (CSK) by six runs at the Barsapara Cricket Stadium in Guwahati on Sunday.</p>
+                    <div class="news-meta">
+                        <span>15 minutes ago</span>
+                        <span>UPDATE</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- News Card 3 -->
+            <div class="news-card">
+                <img src="AA1BWmfo.jpg" alt="New player" class="news-image">
+                <div class="news-content">
+                    <span class="news-category">Soccer</span>
+                    <h3 class="news-title">India All-Stars vs Brazil Legends Live Streaming details: When and where to watch legendary football match online</h3>
+                    <p class="news-excerpt">The football fans in India will be having a treat of their lifetime as India All-Stars will play Brazil Legends in an exhibition football match at the Jawaharlal Nehru Stadium in Chennai on Sunday (March 30). The match, which is a celebration of football heritage in India and Brazil, will see the likes of Ronaldinho, Rivaldo, and Cafu playing against the Indian legendary footballers Mehtab Hossain, Alvito D’Cunha and others.</p>
+                    <div class="news-meta">
+                        <span>1 hour ago</span>
+                        <span>TRANSFER NEWS</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- News Card 4 -->
+            <div class="news-card urgent">
+                <img src="nlwbkjcc0t70f7jorkga (1).jpg" alt="Coach" class="news-image">
+                <div class="news-content">
+                    <span class="news-category">Baseball</span>
+                    <h3 class="news-title">Ottavino returns to Yanks; Devin Williams goes on paternity list</h3>
+                    <p class="news-excerpt">The New York Yankees on Tuesday announced that they have signed right-handed pitcher Adam Ottavino to a Major League contract and added him to the active roster.</p>
+                    <div class="news-meta">
+                        <span>45 minutes ago</span>
+                        <span>URGENT</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- News Card 5 -->
+            <div class="news-card">
+                <img src="Aryna-Sabalenka-interview-6062962.avif" alt="Trophy" class="news-image">
+                <div class="news-content">
+                    <span class="news-category">Tennis</span>
+                    <h3 class="news-title">Today's tennis news as Sabalenka offers to share cash and Djokovic refuses to answer</h3>
+                    <p class="news-excerpt">Sabalenka offers to split prize money
+                        Aryna Sabalenka is the WTA Tour’s latest big title champion. The world No. 1 beat Jessica Pegula 7-5 6-2 to be crowned the Miami Open champion. Afterwards, Sabalenka jokingly admitted she would be more than happy to share her cash prize with Pegula as she apologised for winning.</p>
+                    <div class="news-meta">
+                        <span>3 hours ago</span>
+                        <span>SCHEDULE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Back to <a href="index.html">Main Page</a></p>
+    </footer>
+</body>
+</html>

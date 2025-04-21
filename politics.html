@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Political Breaking News</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        .news-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #d32f2f;
+        }
+        
+        .news-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a237e;
+            margin: 0;
+        }
+        
+        .live-badge {
+            background-color: #d32f2f;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .live-badge::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: white;
+            border-radius: 50%;
+            margin-right: 6px;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+        
+        /* Alert Banner */
+        .alert-banner {
+            background-color: #d32f2f;
+            color: white;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .alert-icon {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        /* News Ticker */
+        .news-ticker {
+            background-color: #1a237e;
+            color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        .ticker-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: ticker 25s linear infinite;
+        }
+        
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        /* News Grid */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .news-card {
+            background-color: white;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .breaking-card {
+            border-left: 4px solid #d32f2f;
+        }
+        
+        .important-card {
+            border-left: 4px solid #ff9800;
+        }
+        
+        .news-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .news-content {
+            padding: 15px;
+        }
+        
+        .news-category {
+            display: inline-block;
+            background-color: #303f9f;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .news-headline {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+            color: #1a237e;
+        }
+        
+        .news-summary {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #777;
+        }
+        
+        .news-time {
+            display: flex;
+            align-items: center;
+        }
+        
+        .news-badge {
+            background-color: #d32f2f;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .news-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .live-badge {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="news-header">
+            <h1 class="news-title">Political Breaking News</h1>
+            <div class="live-badge">LIVE UPDATES</div>
+        </div>
+        
+        <div class="alert-banner">
+            <span class="alert-icon">!</span>
+            <span class="alert-text">BREAKING: President to address nation tonight at 8PM ET on economic measures</span>
+        </div>
+        
+        <div class="news-ticker">
+            <div class="ticker-content">
+                • Senate passes controversial bill after marathon session • Supreme Court agrees to hear abortion case • Foreign Secretary meets with NATO allies • New poll shows shift in voter preferences • Cabinet member resigns unexpectedly •
+            </div>
+        </div>
+        
+        <div class="news-grid">
+            <!-- Breaking News Card -->
+            <div class="news-card breaking-card">
+                <img src="capstone/GettyImages-2194369511-67bc52efbebd46a2a0a825832ae255f7.webp" alt="President addressing nation" class="news-image">
+                <div class="news-content">
+                    <span class="news-category">White House</span>
+                    <h3 class="news-headline">President Announces Major Economic Relief Package</h3>
+                    <p class="news-summary">New measures aim to combat inflation and provide direct assistance to middle-class families struggling with rising costs.</p>
+                    <div class="news-meta">
+                        <span class="news-time">15 minutes ago</span>
+                        <span class="news-badge">BREAKING</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Regular News Card -->
+            <div class="news-card">
+                <img src="capstone/image.webp" alt="Congress in session" class="news-image">
+                <div class="news-content">
+                    <span class="news-category">Legislation</span>
+                    <h3 class="news-headline">Bipartisan Group Reaches Deal on Voting Rights Bill</h3>
+                    <p class="news-summary">Compromise legislation would establish national standards while giving states flexibility in implementation.</p>
+                    <div class="news-meta">
+                        <span class="news-time">2 hours ago</span>
+                        <span>UPDATE</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Important News Card -->
+            <div class="news-card important-card">
+                <img src="capstone/368FFA54-9AEB-43DA-A2EE4BBE20441AF0_source.webp" alt="Supreme Court building" class="news-image">
+                <div class="news-content">
+                    <span class="news-category">Judiciary</span>
+                    <h3 class="news-headline">Supreme Court to Hear Landmark Climate Case</h3>
+                    <p class="news-summary">Justices will consider whether EPA has authority to regulate carbon emissions from power plants.</p>
+                    <div class="news-meta">
+                        <span class="news-time">3 hours ago</span>
+                        <span>IMPORTANT</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional News Cards -->
+            <div class="news-card">
+                <img src="capstone/tile-tours-101.webp" alt="Diplomatic meeting" class="news-image">
+                <div class="news-content">
+                    <span class="news-category">Foreign Policy</span>
+                    <h3 class="news-headline">Secretary of State Begins European Tour</h3>
+                    <p class="news-summary">Talks will focus on coordinating response to ongoing crisis and strengthening NATO alliance.</p>
+                    <div class="news-meta">
+                        <span class="news-time">5 hours ago</span>
+                        <span>REPORT</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="news-card breaking-card">
+                <img src="capstone/00up-vote-vote1-hvlw-articleLarge.webp" alt="Campaign rally" class="news-image">
+                <div class="news-content">
+                    <span class="news-category">Elections</span>
+                    <h3 class="news-headline">New Poll Shows Tight Race in Key States</h3>
+                    <p class="news-summary">Latest survey indicates dramatic shift in voter sentiment just months before midterm elections.</p>
+                    <div class="news-meta">
+                        <span class="news-time">1 hour ago</span>
+                        <span class="news-badge">BREAKING</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="news-card">
+                <img src="capstone/hands-off-protest-locations.webp" alt="Political protest" class="news-image">
+                <div class="news-content">
+                    <span class="news-category">Domestic</span>
+                    <h3 class="news-headline">Major Cities Brace for Planned Demonstrations</h3>
+                    <p class="news-summary">Authorities increase security as activist groups prepare weekend rallies across the country.</p>
+                    <div class="news-meta">
+                        <span class="news-time">8 hours ago</span>
+                        <span>DEVELOPING</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Back to <a href="index.html">Main Page</a></p>
+    </footer>
+</body>
+</html>

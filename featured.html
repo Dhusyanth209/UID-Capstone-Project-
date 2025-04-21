@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured News</title>
+    <style>
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .breaking-news-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Styles */
+        .breaking-news-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        
+        .breaking-news-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 0;
+        }
+        
+        .breaking-news-live {
+            background-color: #e74c3c;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        
+        /* News Ticker Styles */
+        .news-ticker {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .ticker-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: ticker 30s linear infinite;
+        }
+        
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        /* News Grid Styles */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .news-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .news-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .news-content {
+            padding: 15px;
+        }
+        
+        .news-category {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+        
+        .news-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 0 10px 0;
+        }
+        
+        .news-excerpt {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .urgent {
+            border-left: 4px solid #e74c3c;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .breaking-news-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .breaking-news-live {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="breaking-news-container">
+        <div class="breaking-news-header">
+            <h1 class="breaking-news-title">Featured News</h1>
+            <div class="breaking-news-live">LIVE UPDATES</div>
+        </div>
+
+        
+        <div class="news-grid">
+            <!-- News Card 1 -->
+            <div class="news-card urgent">
+                <img src="space.jpg" alt="Space" class="news-image">
+                <div class="news-content">
+                    <span class="news-category">Solar systems</span>
+                    <h3 class="news-title">“They’re Enigmas”, NASA’s Rover Discovers Bizarre Martian Rocks That Defy Explanation</h3>
+                    <p class="news-excerpt">NASA’s Perseverance rover has stumbled upon a collection of mysterious Martian rocks, sparking new questions about the Red Planet’s past. These high-aluminum rocks, rich in kaolinite, suggest that Mars was once far warmer and wetter than previously believed—potentially even hospitable to life. If confirmed, this finding could reshape our understanding of Mars’ history and its potential to have once supported microbial organisms.</p>
+                    <div class="news-meta">
+                        <span>2 minutes ago</span>
+                        <span>URGENT</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- News Card 2 -->
+            <div class="news-card">
+                <img src="" alt="" class="news-image">
+                <div class="news-content">
+                    <span class="news-category">Election</span>
+                    <h3 class="news-title">Hands Tied Due To Kerala Polls, Irked Congress Wants Tharoor To Mind His Tongue | BJP | Covid | N18P</h3>
+                    <p class="news-excerpt">Will Shashi Tharoor join the Bharatiya Janata Party (BJP) soon? No, say those who are close to him as also the man himself. However, the BJP is loving the discomfort of the Congress with Tharoor’s statements.In a span of about 10 days, there have been three occasions when Tharoor has put his party in a spot.First was when he said it was “egg on my face" regarding the Indian government’s Ukraine-Russia policy</p>
+                    <div class="news-meta">
+                        <span>15 minutes ago</span>
+                        <span>UPDATE</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- News Card 3 -->
+            <div class="news-card">
+                <img src="bangkok.avif" alt="New player" class="news-image">
+                <div class="news-content">
+                    <span class="news-category">EarthQuake</span>
+                    <h3 class="news-title">Bangkok skyscraper collapse: Are high-rise buildings safe in earthquake?</h3>
+                    <p class="news-excerpt">The collapse of a 30-storey skyscraper in an earthquake last week in the Thai capital Bangkok has sparked fears of high-rise buildings in the country. The tower under construction toppled as the powerful 7.7 magnitude quake struck central Myanmar and rattled its neighbouring Thailand.</p>
+                    <div class="news-meta">
+                        <span>1 hour ago</span>
+                        <span>TRANSFER NEWS</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- News Card 4 -->
+            <div class="news-card urgent">
+                <img src="pm modi.webp" alt="" class="news-image">
+                <div class="news-content">
+                    <span class="news-category"></span>
+                    <h3 class="news-title">Xi pitches 'Dragon-Elephant tango' ahead of Trump's 'Liberation Day' tariffs</h3>
+                    <p class="news-excerpt">Chinese leader Xi Jinping has said that the India-China relationship should take the form of a “Dragon-Elephant tango”.
+
+                        In a message to mark the 75th anniversary of the India-China diplomatic ties, Xi said that the two countries should find ways to coexist peacefully and that he was ready to deepen communication and coordination in major international affairs and jointly safeguard peace in border areas, according to Chinese Xinhua news agency.</p>
+                    <div class="news-meta">
+                        <span>45 minutes ago</span>
+                        <span>URGENT</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- News Card 5 -->
+            <div class="news-card">
+                <img src="Mahrang-baloch-1-2025-03-97d4c8a52a870b11da0d59e9ec8de752.webp" alt="" class="news-image">
+                <div class="news-content">
+                    <span class="news-category">Protest</span>
+                    <h3 class="news-title">How Mahrang Baloch's arrest opens Pandora's box in Pakistan</h3>
+                    <p class="news-excerpt">The arrest of Mahrang Baloch illustrates the frustrations of a weak Pakistani state. She symbolises the Baloch movement for freedom, homeland, human rights, and women’s aspirations. Her arrest has opened Pandora’s box of reaction, resistance, and rejection of the hegemony of Pakistan. She has been arrested along with several others for the incitement of violence. Concocted charges were thrown at her to embroil her in a legal conundrum.</p>
+                    <div class="news-meta">
+                        <span>3 hours ago</span>
+                        <span>SCHEDULE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Back to <a href="index.html">Main Page</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime News</title>
+    <style>
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .breaking-news-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Styles */
+        .breaking-news-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        
+        .breaking-news-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 0;
+        }
+        
+        .breaking-news-live {
+            background-color: #e74c3c;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        
+        /* News Ticker Styles */
+        .news-ticker {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .ticker-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: ticker 30s linear infinite;
+        }
+        
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        /* News Grid Styles */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .news-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .news-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .news-content {
+            padding: 15px;
+        }
+        
+        .news-category {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-bottom: 8px;
+        }
+        
+        .news-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 0 10px 0;
+        }
+        
+        .news-excerpt {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .urgent {
+            border-left: 4px solid #e74c3c;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .breaking-news-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .breaking-news-live {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="breaking-news-container">
+        <div class="breaking-news-header">
+            <h1 class="breaking-news-title">Crime News</h1>
+            <div class="breaking-news-live">LIVE UPDATES</div>
+        </div>
+
+        
+        <div class="news-grid">
+            <!-- News Card 1 -->
+            <div class="news-card urgent">
+                <img src="untitled-design---2022-05-03t115422-949.webp" alt="Disaster" class="news-image">
+                <div class="news-content">
+                    <span class="news-category">EarthQuake</span>
+                    <h3 class="news-title">ஒரு மணி நேரத்தில் 7 செயின் பறிப்பு.! விமானத்தில் தப்பிக்க திட்டம்- வடமாநிலத்தவரை சுற்றி வளைத்த போலீஸ்</h3>
+                    <p class="news-excerpt">சென்னையில் இன்று காலை ஒரு மணி நேரத்தில் அடுத்தடுத்து 7 இடங்களில் செயின் பறிப்பு சம்பவம் நிகழ்ந்தது. சிசிடிவி மூலம் குற்றவாளிகளை கண்டுபிடித்த போலீசார், வெளிமாநிலத்துக்கு தப்பிச் செல்ல முயன்ற கும்பலை கைது செய்தனர்.   
+                        Chennai chain snatching: Robbery at 7 places in one day! சென்னையில் இன்று காலை அனைத்து காவல் நிலையமும் அலறியது இந்த ஒரு சம்பவத்தால், காலை 6 மணி முதல் 7 மணிக்குள் பள்ளிக்கரணை, வேளச்சேரி, திருவான்மியூர், அடையாறு, சைதாப்பேட்டை, கிண்டி என அடுத்தடுத்து இடங்களில் நடைபெற்ற செயின் பறிப்பு சம்பவம் பரபரப்பை ஏற்படுத்தியது.</p>
+                    <div class="news-meta">
+                        <span>2 minutes ago</span>
+                        <span>URGENT</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- News Card 2 -->
+            <div class="news-card">
+                <img src="crime_5cd523fa70_V_jpg--625x351-4g.webp" alt="" class="news-image">
+                <div class="news-content">
+                    <span class="news-category"></span>
+                    <h3 class="news-title">Crime News: తెలుగు రాష్ట్రాల్లో క్రైమ్.. కలకలం రేపిన గ్యాంగ్ వార్</h3>
+                    <p class="news-excerpt">ఆంధ్రప్రదేశ్, కడప జిల్లా, కమలాపురం పట్టణంలో యువకుల మధ్య ఘర్షణ చోటు చేసుకుంది. ముగ్గురు యువకులపై సల్మాన్ అనే యువకుడు కత్తితో దాడి చేసాడు. ఈ ఘటనలో ఇద్దరు యువకులు తీవ్రంగా గాయపడ్డారు. వారిని చికిత్స నిమిత్తం రిమ్స్‌ ఆస్పత్రికి తరలించారు.            </p>
+                    <div class="news-meta">
+                        <span>15 minutes ago</span>
+                        <span>UPDATE</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- News Card 3 -->
+            <div class="news-card">
+                <img src="2544623-crime-scene.webp"
+                <div class="news-content">
+                    <span class="news-category">Present Situation in Bangkok</span>
+                    <h3 class="news-title">"മദ്യപാനത്തെ ചൊല്ലി തർക്കം; ഭാര്യയെയും മകനെയും തലക്കടിച്ചു വീഴ്ത്തി കഴു</h3>
+                    <p class="news-excerpt">റാഞ്ചി: ഝാര്‍ഖണ്ഡിലെ സരായികേലയില്‍ മദ്യപാനത്തെ ചൊല്ലിയുള്ള തർക്കത്തിനു</p>
+                    <div class="news-meta">
+                        <span>1 hour ago</span>
+                        <span>TRANSFER NEWS</span>
+                    </div>
+                </div>
+            </div>
+    <footer>
+        <p>Back to <a href="index.html">Main Page</a></p>
+    </footer>
+</body>
+</html>
